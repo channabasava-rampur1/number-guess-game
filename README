@@ -1,0 +1,27 @@
+Number Guessing Game (Java GUI)
+
+A fun **number guessing game** built in Java using Swing.  
+The computer generates a random number between 1 and 100, and the player must guess it within limited attempts.  
+Choose your **difficulty level** (Easy / Medium / Hard), get hints, and score points based on how fast you guess correctly. 
+
+
+
+---
+
+## 🚀 How to Run
+
+### ✅ Prerequisites
+- Java JDK 8 or higher  
+- `javac` and `java` should be available in your PATH  
+- Check installation with:
+  ```bash
+  java -version
+  javac -version
+
+
+To compile
+javac ColorfulGuessingGame.java
+
+To run 
+java ColorfulGuessingGame
+
