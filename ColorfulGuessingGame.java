@@ -19,7 +19,7 @@ public class ColorfulGuessingGame extends JFrame {
     private Random random = new Random();
 
     public ColorfulGuessingGame() {
-        setTitle("🎯 Number Guessing Game");
+        setTitle("Number Guessing Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(550, 350);
         setLocationRelativeTo(null);
@@ -36,7 +36,7 @@ public class ColorfulGuessingGame extends JFrame {
         startPanel.setBackground(new Color(240, 248, 255));
         startPanel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
 
-        JLabel title = new JLabel("🎯 Number Guessing Game", SwingConstants.CENTER);
+        JLabel title = new JLabel("Number Guessing Game", SwingConstants.CENTER);
         title.setFont(new Font("Segoe UI", Font.BOLD, 24));
         title.setForeground(new Color(25, 25, 112));
         startPanel.add(title, BorderLayout.NORTH);
@@ -49,9 +49,9 @@ public class ColorfulGuessingGame extends JFrame {
         subtitle.setForeground(new Color(70, 70, 70));
         center.add(subtitle);
 
-        JButton easyBtn = styledButton("🟢 Easy (10 attempts)", new Color(144, 238, 144));
-        JButton mediumBtn = styledButton("🟡 Medium (7 attempts)", new Color(255, 215, 0));
-        JButton hardBtn = styledButton("🔴 Hard (5 attempts)", new Color(240, 128, 128));
+        JButton easyBtn = styledButton("Easy (10 attempts)", new Color(144, 238, 144));
+        JButton mediumBtn = styledButton("Medium (7 attempts)", new Color(255, 215, 0));
+        JButton hardBtn = styledButton("Hard (5 attempts)", new Color(240, 128, 128));
 
         center.add(easyBtn);
         center.add(mediumBtn);
@@ -102,7 +102,7 @@ public class ColorfulGuessingGame extends JFrame {
 
         guessField = new JTextField(10);
         guessField.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        guessButton = styledButton("✅ Guess", new Color(173, 216, 230));
+        guessButton = styledButton("Guess", new Color(173, 216, 230));
 
         inputPanel.add(new JLabel("Enter your guess: "));
         inputPanel.add(guessField);
@@ -155,18 +155,18 @@ public class ColorfulGuessingGame extends JFrame {
         if (guess == numberToGuess) {
             int score = (maxAttempts - attemptsUsed + 1) * 10;
             totalScore += Math.max(score, 0);
-            infoLabel.setText("🎉 Correct! The number was " + numberToGuess);
+            infoLabel.setText("Correct! The number was " + numberToGuess);
             JOptionPane.showMessageDialog(this, "You guessed it in " + attemptsUsed + " tries!\nScore: " + score, "You Win!", JOptionPane.INFORMATION_MESSAGE);
             endRound();
         } else if (attemptsUsed >= maxAttempts) {
-            infoLabel.setText("❌ No attempts left! The number was " + numberToGuess);
+            infoLabel.setText("No attempts left! The number was " + numberToGuess);
             JOptionPane.showMessageDialog(this, "Out of attempts! Number was " + numberToGuess, "Game Over", JOptionPane.ERROR_MESSAGE);
             endRound();
         } else {
             if (guess < numberToGuess) {
-                infoLabel.setText("⬆️ Higher than " + guess);
+                infoLabel.setText("Higher than " + guess);
             } else {
-                infoLabel.setText("⬇️ Lower than " + guess);
+                infoLabel.setText("Lower than " + guess);
             }
         }
 
@@ -183,7 +183,7 @@ public class ColorfulGuessingGame extends JFrame {
         if (option == JOptionPane.YES_OPTION) {
             showStartPage();
         } else {
-            JOptionPane.showMessageDialog(this, "🎮 Final Score: " + totalScore, "Thanks for playing!", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Final Score: " + totalScore, "Thanks for playing!", JOptionPane.INFORMATION_MESSAGE);
             System.exit(0);
         }
     }
